@@ -1,0 +1,88 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Segoe UI", sans-serif;
+}
+
+body {
+  background: linear-gradient(135deg, #c90d74, #f19dc7);
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.game-container {
+  background: #ffffff;
+  padding: 20px;
+  border-radius: 14px;
+  width: 90%;
+  max-width: 360px;
+  text-align: center;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+}
+
+h1 {
+  margin-bottom: 10px;
+  color: #1e293b;
+}
+
+#status {
+  margin-bottom: 15px;
+  font-size: 1.1rem;
+  font-weight: bold;
+  color: #475569;
+}
+
+/* Game Board */
+.board {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 10px;
+}
+
+/* Game Cells */
+.cell {
+  aspect-ratio: 1;
+  background: #e5e7eb;
+  border-radius: 10px;
+  font-size: 2.5rem;
+  font-weight: bold;
+  color: #f8121d;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  transition: background 0.3s, transform 0.2s;
+}
+
+.cell:hover {
+  background: #c7d2fe;
+  transform: scale(1.05);
+}
+
+/* Restart Button */
+button {
+  font-family: Georgia, 'Times New Roman', Times, serif;
+  margin-top: 15px;
+  width: 100%;
+  padding: 10px;
+  background: #df4d91;
+  color: white;
+  border: none;
+  border-radius: 10px;
+  font-size: 1rem;
+  cursor: pointer;
+}
+
+button:hover {
+  background: #b1597b;
+}
+
+/* Responsive Design */
+@media (max-width: 480px) {
+  .cell {
+    font-size: 2rem;
+  }
+}
